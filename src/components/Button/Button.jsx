@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import greenArrow from "assets/green-arrow.svg";
-import redArrow from "assets/red-arrow.svg";
+// import greenArrow from "assets/green-arrow.svg";
+// import redArrow from "assets/red-arrow.svg";
+
 
 const StyledButton = styled.button`
   width: ${props => props.width};
@@ -28,7 +29,7 @@ export const Button = ({ label, width, height, textColor, bgColor, boderColor, p
     borderRadius={borderRadius}
     {...rest}
   >
-    {percent && <img src={percent < 0 ? redArrow : greenArrow} alt="arr"></img>}
+    {/* {percent && <img src={percent < 0 ? redArrow : greenArrow} alt="arr"></img>} */}
     {label ? label : children}
   </StyledButton>;
 }
@@ -37,6 +38,5 @@ Button.defaultProps = {
   textColor: '#5429FF',
   width: "128px",
   height: "46px",
-  borderRadius: '40px',
   fontSize: 16,
 };

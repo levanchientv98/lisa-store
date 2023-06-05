@@ -1,12 +1,22 @@
 import { Layout, Space } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
+import { Header } from "components/Header";
+
+
+const { Footer, Content } = Layout;
+
+const LayoutStyle = {
+    fontFamily: 'Roboto',
+
+}
+
 const headerStyle = {
     textAlign: 'center',
-    color: '#fff',
-    height: 64,
+    color: '#0a0a0a',
+    height: 'auto',
+    with: '100%',
     paddingInline: 50,
     lineHeight: '64px',
-    backgroundColor: '#7dbcea',
+    backgroundColor: '#F0F0F0',
 };
 const contentStyle = {
     textAlign: 'center',
@@ -15,12 +25,7 @@ const contentStyle = {
     color: '#fff',
     backgroundColor: '#108ee9',
 };
-const siderStyle = {
-    textAlign: 'center',
-    lineHeight: '120px',
-    color: '#fff',
-    backgroundColor: '#3ba0e9',
-};
+
 const footerStyle = {
     textAlign: 'center',
     color: '#fff',
@@ -34,34 +39,11 @@ const PrimaryLayout = () => (
         }}
         size={[0, 48]}
     >
-        <Layout>
-            <Header style={headerStyle}>Header</Header>
+        <Layout style={LayoutStyle}>
+            <Header style={headerStyle}>
+            </Header>
             <Content style={contentStyle}>Content</Content>
             <Footer style={footerStyle}>Footer</Footer>
-        </Layout>
-        <Layout>
-            <Header style={headerStyle}>Header</Header>
-            <Layout hasSider>
-                <Sider style={siderStyle}>Sider</Sider>
-                <Content style={contentStyle}>Content</Content>
-            </Layout>
-            <Footer style={footerStyle}>Footer</Footer>
-        </Layout>
-        <Layout>
-            <Header style={headerStyle}>Header</Header>
-            <Layout hasSider>
-                <Content style={contentStyle}>Content</Content>
-                <Sider style={siderStyle}>Sider</Sider>
-            </Layout>
-            <Footer style={footerStyle}>Footer</Footer>
-        </Layout>
-        <Layout>
-            <Sider style={siderStyle}>Sider</Sider>
-            <Layout>
-                <Header style={headerStyle}>Header</Header>
-                <Content style={contentStyle}>Content</Content>
-                <Footer style={footerStyle}>Footer</Footer>
-            </Layout>
         </Layout>
     </Space>
 );

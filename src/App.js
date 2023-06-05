@@ -1,9 +1,9 @@
-import { Button } from './components/Button';
 import './App.css';
+import { PrimaryLayout } from 'components/Layout';
 
 function App() {
   return (
-    <Button>s</Button>
+    <PrimaryLayout></PrimaryLayout>
   );
 }
 
