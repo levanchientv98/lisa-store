@@ -7,20 +7,24 @@ import tree2 from "assets/tree2.svg";
 import { Navigation } from "components/Navigation";
 
 const HeaderStyled = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-  text-align: center;
-  height: auto;
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22%22");
+  height: 844px;
   width: 100%;
-  padding: 0 300px 60px 304px;
   line-height: 64px;
   background-color: #f0f0f0;
+
+  .Header-content {
+    height: 844px;
+    width: 80%;
+    margin: 0 300px 60px 304px;
+  }
 
   .Layout-Content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 210px;
+    justify-content: space-between;
+    width: 80%;
+    margin: 135px 0 0 0;
   }
 
   .title-header {
@@ -33,16 +37,19 @@ const HeaderStyled = styled.div`
   }
 
   .title-header h1 {
-    font-family: "Roboto";
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22%22");
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-size: 74px;
     line-height: 55px;
+    margin: 70px 0 0 0;
     text-transform: capitalize;
   }
 
   .title-header p {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     text-align: left;
+
     font-weight: 400;
     font-size: 30px;
     line-height: 55px;
@@ -50,7 +57,7 @@ const HeaderStyled = styled.div`
     margin: 0;
   }
   .img-size1 {
-    width: 40%;
+    width: 35%;
   }
 
   .flex-container {
@@ -61,7 +68,7 @@ const HeaderStyled = styled.div`
   }
   .flex-container p {
     margin: 0;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 29px;
     line-height: 34px;
@@ -76,44 +83,46 @@ const HeaderStyled = styled.div`
     position: absolute;
     width: 132.34px;
     left: 0px;
-    top: 657px;
+    top: 757px;
   }
 
   .Group-tree img:last-child {
     width: 194.75px;
     position: absolute;
     right: 0;
-    top: 400px;
+    top: 545px;
   }
 `;
 
 const Header = () => {
   return (
     <HeaderStyled>
-      <Navigation />
-      <div className="Layout-Content">
-        <div className="title-header">
-          <h1>Collections</h1>
-          <p>
-            you can explore ans shop many differnt collection from various
-            barands here.
-          </p>
-          <Button
-            className="flex-container"
-            width="223px"
-            height="72px"
-            bgColor="#1E2832"
-            textColor="#fff"
-          >
-            <img src={CartIcon} alt="cart-icon"></img>
-            <p>Shop now</p>
-          </Button>
+      <div className="Header-content">
+        <Navigation />
+        <div className="Layout-Content">
+          <div className="title-header">
+            <h1>Collections</h1>
+            <p>
+              you can explore ans shop many differnt collection from various
+              barands here.
+            </p>
+            <Button
+              className="flex-container"
+              width="223px"
+              height="72px"
+              bgColor="#1E2832"
+              textColor="#fff"
+            >
+              <img src={CartIcon} alt="cart-icon"></img>
+              <p>Shop now</p>
+            </Button>
+          </div>
+          <img className="img-size1" src={product} alt="img-product" />
         </div>
-        <img className="img-size1" src={product} alt="img-product" />
-      </div>
-      <div className="Group-tree">
+        {/* <div className="Group-tree">
         <img src={tree1} alt="tree1" />
         <img src={tree2} alt="tree2" />
+      </div> */}
       </div>
     </HeaderStyled>
   );

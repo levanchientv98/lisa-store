@@ -1,11 +1,26 @@
 import styled from "styled-components";
 import iconSearch from "assets/icon-search.svg";
+import { ReactComponent as User } from "assets/user-icon.svg";
+import { ReactComponent as Cart } from "assets/icon-cart2.svg";
 
 const StyledNavigation = styled.div`
   display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  border-bottom: 1px solid #e3e3e3;
+
+  h1 {
+    font-family: "AmstelvarAlpha";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 50px;
+  }
 
   .search-bar {
-    margin-top: 40px;
     padding: 0px;
     width: 50px;
     display: flex;
@@ -19,7 +34,7 @@ const StyledNavigation = styled.div`
   }
   .input-search {
     height: 50px;
-    width: 50px;
+    width: 0px;
     border-style: none;
     padding: 10px;
     font-size: 18px;
@@ -38,8 +53,6 @@ const StyledNavigation = styled.div`
     font-weight: 100;
   }
   .btn-search {
-    width: 50px;
-    height: 50px;
     border-style: none;
     font-size: 20px;
     font-weight: bold;
@@ -51,6 +64,11 @@ const StyledNavigation = styled.div`
     color: #141414;
     background-color: transparent;
     pointer-events: painted;
+  }
+  .icon-size {
+    padding-top: 18px;
+    width: 40px;
+    height: 40px;
   }
   .btn-search:focus ~ .input-search {
     width: 300px;
@@ -66,6 +84,42 @@ const StyledNavigation = styled.div`
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
   }
+
+  .Group-title-nav {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .Group-title-nav a {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 21px;
+    /* identical to box height */
+    text-transform: capitalize;
+    color: #1e2832;
+    text-decoration: none;
+  }
+
+  .flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .flex-item:hover {
+    a {
+      color: #ff6f61;
+    }
+    svg {
+      filter: invert(47%) sepia(71%) saturate(632%) hue-rotate(317deg)
+        brightness(111%) contrast(101%);
+    }
+  }
 `;
 
 const Navigation = () => {
@@ -74,13 +128,28 @@ const Navigation = () => {
       <div className="search-bar">
         <div className="search-box">
           <button className="btn-search">
-            <img src={iconSearch} alt="" />
+            <img className="icon-size" src={iconSearch} alt="icon-search" />
           </button>
           <input
             type="text"
             class="input-search"
             placeholder="Type to Search..."
           />
+        </div>
+      </div>
+      <h1>Lisa Store</h1>
+      <div className="Group-title-nav">
+        <div className="flex-item">
+          <User />
+          <a href="/">
+            <span> Account </span>
+          </a>
+        </div>
+        <div className="flex-item">
+          <Cart />
+          <a href="/">
+            <span> Shoping</span>
+          </a>
         </div>
       </div>
     </StyledNavigation>
