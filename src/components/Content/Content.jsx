@@ -35,6 +35,7 @@ const ContentStyled = styled.div`
     margin: 90px 300px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
   }

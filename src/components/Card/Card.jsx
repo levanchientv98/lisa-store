@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { ReactComponent as Heart } from "assets/heart-icon1.svg";
 import { ReactComponent as Search } from "assets/icon-search.svg";
-import { ReactComponent as Shop } from "assets/v6-icon (free).svg";
+import { ReactComponent as Shop } from "assets/icon-cart2.svg";
 
 const StyledCard = styled.div`
   display: flex;
