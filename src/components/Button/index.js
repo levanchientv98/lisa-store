@@ -1,2 +1,3 @@
 import { Button } from './Button';
-export { Button };
+import { ScrollToTopButton} from './ScrollToTopButton'
+export { Button, ScrollToTopButton };

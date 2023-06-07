@@ -22,6 +22,7 @@ import product7 from "assets/image-product-1.svg";
 import product8 from "assets/image-product-8.svg";
 import { Banner } from "components/Banner";
 import { SliderProduct } from "components/SliderProduct";
+import { Newletter } from "components/Newletter";
 
 const ContentStyled = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22%22");
@@ -30,9 +31,9 @@ const ContentStyled = styled.div`
   background-color: #ffffff;
 
   .Group-brand {
-    width: 1320px;
+    width: 70%;
     height: 70px;
-    margin: 90px 300px;
+    margin: 90px 15vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -43,6 +44,7 @@ const ContentStyled = styled.div`
   .hot-catagory {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 24px;
     position: relative;
     margin-bottom: 140px;
@@ -81,8 +83,8 @@ const ContentStyled = styled.div`
     text-transform: capitalize;
   }
   .grid-product {
-    width: 1320px;
-    margin: 0 300px;
+    width: 70%;
+    margin: 0 15vw;
   }
   .product-title {
     width: 100%;
@@ -258,6 +260,7 @@ const Content = () => {
       </div>
       <Banner />
       <SliderProduct></SliderProduct>
+      <Newletter />
     </ContentStyled>
   );
 };

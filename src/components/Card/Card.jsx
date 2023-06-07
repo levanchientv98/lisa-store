@@ -4,6 +4,7 @@ import { ReactComponent as Search } from "assets/icon-search.svg";
 import { ReactComponent as Shop } from "assets/icon-cart2.svg";
 
 const StyledCard = styled.div`
+  width: 312px;
   display: flex;
   flex-direction: column;
 
