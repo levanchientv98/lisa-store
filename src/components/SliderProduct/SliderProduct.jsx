@@ -26,7 +26,7 @@ const SlideProduct = () => {
       <div className="section4-title">Best sellers</div>
       <div className="product-title">
         <div className="list-title">
-          <span>All Products</span>
+          <p>All Products</p>
           <span>T-Shirt</span>
           <span>Hoodies</span>
           <span>Jacket</span>

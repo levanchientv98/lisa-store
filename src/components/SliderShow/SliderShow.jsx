@@ -1,5 +1,4 @@
 import Carousel from "react-multi-carousel";
-import styled from "styled-components";
 
 import product1 from "assets/image-product-3.svg";
 import product2 from "assets/image-product-4.svg";
@@ -31,7 +30,6 @@ const responsive = {
   },
 };
 
-const SilderShowStyle = styled.div``;
 const DataProducts = [
   {
     img: product2,
@@ -93,20 +91,18 @@ const DataProducts = [
 
 const SliderShow = () => {
   return (
-    <SilderShowStyle>
-      <Carousel responsive={responsive}>
-        {DataProducts.map((item) => (
-          <Card
-            title={item.title}
-            img={item.img}
-            tag={item.tag}
-            category={item.category}
-            oldprice={item.oldprice}
-            newprice={item.newprice}
-          ></Card>
-        ))}
-      </Carousel>
-    </SilderShowStyle>
+    <Carousel responsive={responsive}>
+      {DataProducts.map((item) => (
+        <Card
+          title={item.title}
+          img={item.img}
+          tag={item.tag}
+          category={item.category}
+          oldprice={item.oldprice}
+          newprice={item.newprice}
+        ></Card>
+      ))}
+    </Carousel>
   );
 };
 export default SliderShow;

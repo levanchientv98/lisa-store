@@ -5,7 +5,7 @@ import { ReactComponent as Cart } from "assets/icon-cart2.svg";
 
 const StyledNavigation = styled.div`
   display: flex;
-  width: 90%;
+  width: 85%;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;

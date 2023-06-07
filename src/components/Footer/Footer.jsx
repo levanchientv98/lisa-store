@@ -5,7 +5,7 @@ import linkin from "assets/icon-link.svg";
 import instagram from "assets/icon-instag.svg";
 import iconPayment from "assets/icons_payment 1.svg";
 import iconTop from "assets/icon-top-arrow.svg";
-import { Button, ScrollToTopButton } from "components/Button";
+import { ScrollToTopButton } from "components/Button";
 
 const TopFooterStyle = styled.div`
   display: flex;

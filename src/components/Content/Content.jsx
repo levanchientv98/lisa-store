@@ -129,7 +129,18 @@ const ContentStyled = styled.div`
     color: rgba(0, 0, 0, 0.5);
   }
 
-  .list-title span:first-child {
+  .list-title span:hover {
+    color: #ff6f61;
+  }
+
+  .list-title p {
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    text-transform: capitalize;
     color: #000;
   }
   .Filter Button:hover {
@@ -141,6 +152,9 @@ const ContentStyled = styled.div`
     display: grid;
     gap: 18px;
     grid-template-columns: auto auto auto auto;
+  }
+  .factory:hover {
+    color: #ff6f61;
   }
 `;
 
@@ -227,7 +241,7 @@ const Content = () => {
         <h1 className="section-title">Or subscribe to the newsletter</h1>
         <div className="product-title">
           <div className="list-title">
-            <span>All Products</span>
+            <p>All Products</p>
             <span>T-Shirt</span>
             <span>Hoodies</span>
             <span>Jacket</span>

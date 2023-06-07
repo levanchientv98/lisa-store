@@ -32,6 +32,7 @@ const NewletterStyle = styled.div`
 
   .Group-instagram {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 24px;
   }

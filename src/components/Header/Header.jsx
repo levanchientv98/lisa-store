@@ -8,15 +8,18 @@ import { Navigation } from "components/Navigation";
 
 const HeaderStyled = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22%22");
-  height: 844px;
+  position: relative;
+  height: auto;
   width: 100%;
   line-height: 64px;
   background-color: #f0f0f0;
 
   .Header-content {
-    height: 844px;
+    height: auto;
     width: 80%;
-    margin: 0 300px 60px 304px;
+    padding-bottom: 6vh;
+    margin: 0 15vw 0 15vw;
+    background-color: #f0f0f0;
   }
 
   .Layout-Content {
@@ -24,7 +27,7 @@ const HeaderStyled = styled.div`
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
-    margin: 135px 0 0 0;
+    padding: 135px 0 0 0;
   }
 
   .title-header {
@@ -32,7 +35,7 @@ const HeaderStyled = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 686px;
+    width: 60%;
     gap: 65px;
   }
 
@@ -83,14 +86,41 @@ const HeaderStyled = styled.div`
     position: absolute;
     width: 132.34px;
     left: 0px;
-    top: 757px;
+    top: 616px;
   }
 
   .Group-tree img:last-child {
     width: 194.75px;
     position: absolute;
     right: 0;
-    top: 545px;
+    top: 368px;
+  }
+
+  //Màn hình Moblie
+  @media (max-width: 768px) {
+    .title-header {
+      gap: 15px;
+    }
+    .title-header h1 {
+      font-size: 34px;
+    }
+
+    .title-header p {
+      font-size: 14px;
+    }
+  }
+
+  //Màn hình laptop
+  @media (max-width: 1399.98px) {
+    .Header-content {
+      height: 844px;
+      width: 80%;
+      padding: 0 10vw;
+      margin: 0;
+    }
+    .Group-tree {
+      display: none;
+    }
   }
 `;
 
@@ -108,7 +138,7 @@ const Header = () => {
             </p>
             <Button
               className="flex-container"
-              width="223px"
+              width="12vw"
               height="72px"
               bgColor="#1E2832"
               textColor="#fff"
@@ -119,10 +149,10 @@ const Header = () => {
           </div>
           <img className="img-size1" src={product} alt="img-product" />
         </div>
-        {/* <div className="Group-tree">
-        <img src={tree1} alt="tree1" />
-        <img src={tree2} alt="tree2" />
-      </div> */}
+        <div className="Group-tree">
+          <img src={tree1} alt="tree1" />
+          <img src={tree2} alt="tree2" />
+        </div>
       </div>
     </HeaderStyled>
   );
