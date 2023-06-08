@@ -155,6 +155,7 @@ const ContentStyled = styled.div`
     color: #ff6f61;
   }
 
+  //Màn hình Moblie
   @media (max-width: 768px) {
     .list-products {
       display: grid;
@@ -163,11 +164,62 @@ const ContentStyled = styled.div`
     }
     .Group-brand {
       gap: 10px;
+      margin: 35px 15vw 25vw;
+    }
+    .topmodel {
+      width: 80vw;
+    }
+    .title-section1 {
+      top: -60px;
+      left: 0px;
+      transform: none;
+      font-size: 24px;
+    }
+    .gird-container1 {
+      grid-template-columns: 1fr;
+    }
+
+    .hot-catagory {
+      margin-bottom: 6vh;
+      img:first-child {
+        width: 80vw;
+      }
+    }
+    .grid-product {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0%;
+    }
+
+    .section-title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    .list-title {
+      width: 70%;
+      p {
+        font-size: 14px;
+      }
+      span {
+        font-size: 11px;
+      }
+    }
+
+    .product-title {
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .Filter button {
+      width: 18vw;
     }
   }
 `;
-
-//Màn hình Moblie
 
 // data product
 const DataCategory = [

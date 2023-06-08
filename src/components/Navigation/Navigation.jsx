@@ -129,19 +129,28 @@ const StyledNavigation = styled.div`
     justify-content: center;
     align-items: flex-start;
     margin: 0;
-    height: auto;
+    height: 20vh;
 
     h1 {
-      margin: 1vh 15vw;
+      font-size: 40px;
+      margin: 2vw 15vw 0 15vw;
     }
     .search-box {
       display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 6vh;
+    }
+    .search-box button {
+      width: 10vw;
     }
     .search-bar {
       order: 1;
     }
 
     .Group-title-nav {
+      padding: 10px;
+      width: 100%;
       order: 1;
     }
 
@@ -155,7 +164,7 @@ const StyledNavigation = styled.div`
     }
     .icon-size {
       padding: 0;
-      width: 10vw;
+      width: 8vw;
     }
 
     .btn-search:focus ~ .input-search {

@@ -11,7 +11,6 @@ const HeaderStyled = styled.div`
   position: relative;
   height: auto;
   width: 100%;
-  line-height: 64px;
   background-color: #f0f0f0;
 
   .Header-content {
@@ -98,26 +97,43 @@ const HeaderStyled = styled.div`
 
   //Màn hình Moblie
   @media (max-width: 768px) {
+    .Layout-Content {
+      padding: 0;
+      width: 100%;
+    }
+
     .title-header {
-      gap: 15px;
+      width: 50%;
+      gap: 0;
     }
     .title-header h1 {
       font-size: 34px;
+      margin: 0;
+      padding-top: 5vh;
+    }
+    .title-header p {
+      font-size: 10px;
+      line-height: 5vh;
     }
 
-    .title-header p {
-      font-size: 15px;
+    Button {
+      width: 30vw;
+      height: 5vh;
+    }
+    .img-size1 {
+      padding-top: 10vh;
+      width: 45%;
+    }
+    .Header-content {
+      height: auto;
+      width: 80%;
+      padding: 0 10vw 5vh 10vw;
+      margin: 0;
     }
   }
 
   //Màn hình laptop
   @media (max-width: 1399.98px) {
-    .Header-content {
-      height: 844px;
-      width: 80%;
-      padding: 0 10vw;
-      margin: 0;
-    }
     .Group-tree {
       display: none;
     }

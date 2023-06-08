@@ -59,6 +59,25 @@ const BannerStyled = styled.div`
   .section3-title Button:hover {
     background-color: #ff6f61;
   }
+
+  //Màn hình Moblie
+  @media (max-width: 768px) {
+    background-size: contain;
+    .logo-style {
+      width: 40vw;
+      top: 15px;
+    }
+    .section3-title {
+      gap: 0px;
+      img {
+        width: 15vw;
+      }
+      p {
+        font-size: 10px;
+        line-height: 15px;
+      }
+    }
+  }
 `;
 
 const Banner = () => {
