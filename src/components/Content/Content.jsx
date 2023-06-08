@@ -11,7 +11,7 @@ import item4 from "assets/item-category-hover 1.svg";
 import item5 from "assets/item-category5.svg";
 import iconFilter from "assets/v6-iconfilter.svg";
 import { Button } from "components/Button";
-import { Card } from "components/Card";
+import { Card, CardExplore } from "components/Card";
 import product1 from "assets/image-product-3.svg";
 import product2 from "assets/image-product-4.svg";
 import product3 from "assets/image-product-5.svg";
@@ -27,12 +27,11 @@ import { Newletter } from "components/Newletter";
 const ContentStyled = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22%22");
   height: auto;
-  line-height: 64px;
   background-color: #ffffff;
 
   .Group-brand {
     width: 70%;
-    height: 70px;
+    height: auto;
     margin: 90px 15vw;
     display: flex;
     flex-direction: row;
@@ -59,7 +58,6 @@ const ContentStyled = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 34px;
-    line-height: 40px;
     text-align: center;
     text-transform: uppercase;
     transform: rotate(-90deg);
@@ -68,7 +66,7 @@ const ContentStyled = styled.div`
   .gird-container1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .section-title {
@@ -156,7 +154,20 @@ const ContentStyled = styled.div`
   .factory:hover {
     color: #ff6f61;
   }
+
+  @media (max-width: 768px) {
+    .list-products {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: auto;
+    }
+    .Group-brand {
+      gap: 10px;
+    }
+  }
 `;
+
+//Màn hình Moblie
 
 // data product
 const DataCategory = [
@@ -217,6 +228,31 @@ const DataCategory = [
   },
 ];
 
+const dataItem = [
+  {
+    image: item2,
+    name: "pants",
+    total: 200,
+  },
+  {
+    image: item5,
+    name: "coat",
+    total: 520,
+    tag: "Sale",
+    bgColor: "#1E2832",
+  },
+  {
+    image: item3,
+    name: "shirt",
+    total: 320,
+  },
+  {
+    image: item4,
+    name: "jacket",
+    total: 103,
+  },
+];
+
 const Content = () => {
   return (
     <ContentStyled>
@@ -229,12 +265,22 @@ const Content = () => {
       </div>
       <div className="hot-catagory">
         <div className="title-section1">Explore new and popular styles</div>
-        <img src={item1} alt="item-category1" />
+        <CardExplore
+          className="topmodel"
+          image={item1}
+          name={"manto"}
+          total={86}
+        />{" "}
         <div className="gird-container1">
-          <img src={item2} alt="item-category2" />
-          <img src={item5} alt="item-category2" />
-          <img src={item3} alt="item-category2" />
-          <img src={item4} alt="item-category2" />
+          {dataItem.map((item) => (
+            <CardExplore
+              image={item.image}
+              name={item.name}
+              total={item.total}
+              tag={item.tag}
+              bgColor={item.bgColor}
+            />
+          ))}
         </div>
       </div>
       <div className="grid-product">

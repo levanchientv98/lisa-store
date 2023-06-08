@@ -1,3 +1,4 @@
 import Card from './Card';
+import CardExplore from './CardExplore'
 
-export { Card };
+export { Card, CardExplore };

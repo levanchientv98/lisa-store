@@ -106,7 +106,7 @@ const HeaderStyled = styled.div`
     }
 
     .title-header p {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
 

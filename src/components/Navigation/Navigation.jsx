@@ -24,7 +24,7 @@ const StyledNavigation = styled.div`
     padding: 0px;
     width: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
   }
   .search-box {
@@ -34,7 +34,7 @@ const StyledNavigation = styled.div`
   }
   .input-search {
     height: 50px;
-    width: 0px;
+    width: 0;
     border-style: none;
     padding: 10px;
     font-size: 18px;
@@ -60,7 +60,7 @@ const StyledNavigation = styled.div`
     cursor: pointer;
     border-radius: 50%;
     position: absolute;
-    right: 0px;
+    left: 0px;
     color: #141414;
     background-color: transparent;
     pointer-events: painted;
@@ -71,17 +71,17 @@ const StyledNavigation = styled.div`
     height: 40px;
   }
   .btn-search:focus ~ .input-search {
-    width: 300px;
+    width: 10vw;
     border-radius: 0px;
     background-color: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-left: 50px;
     transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
   }
   .input-search:focus {
-    width: 300px;
+    width: 10vw;
+    padding-left: 50px;
     border-radius: 0px;
     background-color: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
   }
 
@@ -118,6 +118,49 @@ const StyledNavigation = styled.div`
     svg {
       filter: invert(47%) sepia(71%) saturate(632%) hue-rotate(317deg)
         brightness(111%) contrast(101%);
+    }
+  }
+
+  //Màn hình Moblie
+  @media (max-width: 768px) {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    height: auto;
+
+    h1 {
+      margin: 1vh 15vw;
+    }
+    .search-box {
+      display: flex;
+    }
+    .search-bar {
+      order: 1;
+    }
+
+    .Group-title-nav {
+      order: 1;
+    }
+
+    .input-search:focus {
+      width: 50vw;
+      padding-left: 0;
+    }
+
+    .btn-search {
+      position: static;
+    }
+    .icon-size {
+      padding: 0;
+      width: 10vw;
+    }
+
+    .btn-search:focus ~ .input-search {
+      width: 50vw;
+      padding-left: 0;
     }
   }
 `;
