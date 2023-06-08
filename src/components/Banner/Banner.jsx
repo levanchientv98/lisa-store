@@ -25,8 +25,8 @@ const BannerStyled = styled.div`
     width: 30%;
     display: flex;
     flex-direction: column;
-    padding-left: 56vw;
-    gap: 5vh;
+    padding-left: 1100px;
+    gap: 50px;
   }
   .section3-title p {
     @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22%22");
@@ -55,6 +55,10 @@ const BannerStyled = styled.div`
     /* Black */
     color: #1e2832;
   }
+  .section3-title img {
+    width: 191px;
+    height: 81px;
+  }
 
   .section3-title Button:hover {
     background-color: #ff6f61;
@@ -63,18 +67,36 @@ const BannerStyled = styled.div`
   //Màn hình Moblie
   @media (max-width: 768px) {
     background-size: contain;
+    height: auto;
     .logo-style {
-      width: 40vw;
+      width: 150px;
+      right: 24px;
       top: 15px;
     }
     .section3-title {
+      width: 58%;
+      height: 100px;
+      position: absolute;
+      top: 7118px;
+      padding-left: 178px;
       gap: 0px;
       img {
         width: 15vw;
       }
       p {
-        font-size: 10px;
+        width: 90%;
+        font-size: 9px;
         line-height: 15px;
+      }
+      span {
+        font-size: 10px;
+      }
+      button {
+        width: 80px;
+        height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -87,11 +109,7 @@ const Banner = () => {
         <img className="logo-style" src={logo1} alt="logo-zara" />
       </div>
       <div className="section3-title">
-        <img
-          style={{ width: "191px", height: "81px" }}
-          src={logo2}
-          alt="logo-zara"
-        />
+        <img src={logo2} alt="logo-zara" />
         <p>
           Lustrous yet understated. The new evening wear collection exclusively
           offered at the reopened Giorgio Armani boutique in Los Angeles.

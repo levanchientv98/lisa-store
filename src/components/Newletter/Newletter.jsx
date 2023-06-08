@@ -14,7 +14,7 @@ const NewletterStyle = styled.div`
     display: flex;
     flex-direction: column;
     gap: 60px;
-    margin: 0 15vw;
+    margin: 0 300px;
     padding: 100px 0;
   }
 
@@ -72,6 +72,26 @@ const NewletterStyle = styled.div`
   }
   .action1 {
     position: relative;
+  }
+
+  //Màn hình Moblie
+  @media (max-width: 768px) {
+    .section5-layout {
+      margin: 0 40px;
+      width: 80%;
+      justify-content: center;
+      align-items: center;
+    }
+    .section5-tilte {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    .Group-instagram {
+      justify-content: center;
+    }
+    .sign {
+      padding-bottom: 0;
+    }
   }
 `;
 

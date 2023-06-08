@@ -5,7 +5,7 @@ import { SliderShow } from "components/SliderShow";
 
 const SilderProductStyle = styled.div`
   width: 70%;
-  margin: 140px 15vw;
+  margin: 140px 300px;
 
   .section4-title {
     @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22%22");
@@ -17,6 +17,23 @@ const SilderProductStyle = styled.div`
 
     text-align: center;
     text-transform: capitalize;
+  }
+
+  //Màn hình Moblie
+  @media (max-width: 768px) {
+    margin: 0 40px;
+    width: 100%;
+    .section4-title {
+      width: 310px;
+    }
+    .react-multiple-carousel__arrow--right {
+      top: calc(4% + 150px);
+      right: calc(4% + 44px);
+    }
+    .react-multiple-carousel__arrow--left {
+      top: calc(4% + 150px);
+      left: calc(4% + -16px);
+    }
   }
 `;
 

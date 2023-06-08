@@ -90,7 +90,8 @@ const StyledNavigation = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    gap: 22px;
+    justify-content: flex-start;
   }
 
   .Group-title-nav a {

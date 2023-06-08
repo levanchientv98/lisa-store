@@ -15,9 +15,12 @@ const HeaderStyled = styled.div`
 
   .Header-content {
     height: auto;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     padding-bottom: 6vh;
-    margin: 0 15vw 0 15vw;
     background-color: #f0f0f0;
   }
 
@@ -25,7 +28,7 @@ const HeaderStyled = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
     padding: 135px 0 0 0;
   }
 
@@ -154,7 +157,7 @@ const Header = () => {
             </p>
             <Button
               className="flex-container"
-              width="12vw"
+              width="223px"
               height="72px"
               bgColor="#1E2832"
               textColor="#fff"

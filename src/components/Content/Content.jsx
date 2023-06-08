@@ -32,27 +32,28 @@ const ContentStyled = styled.div`
   .Group-brand {
     width: 70%;
     height: auto;
-    margin: 90px 15vw;
+    margin: 81px 300px 90px 300px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 
   .hot-catagory {
     display: flex;
+    width: 70%;
+    margin: 0 300px 140px 300px;
     justify-content: center;
     flex-wrap: wrap;
     gap: 24px;
     position: relative;
-    margin-bottom: 140px;
   }
 
   .title-section1 {
     position: absolute;
     top: 310px;
-    left: -40px;
+    left: -315px;
     @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22%22");
     font-family: "Roboto";
     font-style: normal;
@@ -81,8 +82,10 @@ const ContentStyled = styled.div`
     text-transform: capitalize;
   }
   .grid-product {
+    display: flex;
+    flex-direction: column;
     width: 70%;
-    margin: 0 15vw;
+    margin: 0 300px;
   }
   .product-title {
     width: 100%;
@@ -163,15 +166,15 @@ const ContentStyled = styled.div`
       grid-template-columns: auto;
     }
     .Group-brand {
+      width: 100%;
       gap: 10px;
-      margin: 35px 15vw 25vw;
+      justify-content: center;
+      margin: 35px 0;
     }
-    .topmodel {
-      width: 80vw;
-    }
+
     .title-section1 {
-      top: -60px;
-      left: 0px;
+      width: 80%;
+      position: static;
       transform: none;
       font-size: 24px;
     }
@@ -180,9 +183,14 @@ const ContentStyled = styled.div`
     }
 
     .hot-catagory {
-      margin-bottom: 6vh;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 45px 0;
       img:first-child {
-        width: 80vw;
+        width: 300px;
       }
     }
     .grid-product {
@@ -211,12 +219,17 @@ const ContentStyled = styled.div`
     .product-title {
       width: 80%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
+      margin-bottom: 10px;
     }
 
     .Filter button {
       width: 18vw;
+    }
+
+    .Filter-container p {
+      font-size: 12px;
     }
   }
 `;

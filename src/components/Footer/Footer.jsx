@@ -12,8 +12,8 @@ const TopFooterStyle = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 241px 0 90px 0;
-  margin: 0 15vw;
+  padding: 241px 0 96px 0;
+  margin: 0 300px;
 
   .top-footer {
     width: 200px;
@@ -83,6 +83,13 @@ const TopFooterStyle = styled.div`
     flex-direction: row;
     justify-content: space-between;
   }
+
+  //Màn hình Moblie
+  @media (max-width: 768px) {
+    margin: 0 40px;
+    gap: 20px;
+    padding: 141px 0 96px 0;
+  }
 `;
 
 const BottomFooterStyle = styled.div`
@@ -117,6 +124,24 @@ const BottomFooterStyle = styled.div`
 
   Button:hover {
     background-color: #ff6f61;
+  }
+
+  //Màn hình Moblie
+  @media (max-width: 768px) {
+    padding: 12px 0;
+    .icon-size1 {
+      width: 150px;
+    }
+    .flex-container span {
+      font-size: 10px;
+    }
+    div {
+      font-size: 12px;
+      margin: 0 5px;
+    }
+    button {
+      margin: 0 10px;
+    }
   }
 `;
 
