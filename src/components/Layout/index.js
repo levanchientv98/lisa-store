@@ -1,3 +1,4 @@
 import PrimaryLayout from './Layout';
+import PrimaryLayoutAdmin from './LayoutAdmin';
 
-export { PrimaryLayout };
+export { PrimaryLayout, PrimaryLayoutAdmin};

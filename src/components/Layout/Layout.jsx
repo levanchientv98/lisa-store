@@ -14,8 +14,9 @@ const LayoutStyle = styled.div`
   }
 `;
 
-const PrimaryLayout = () => (
+const PrimaryLayout = ({ children }) => (
   <LayoutStyle>
+    {children}
     <Header></Header>
     <Content></Content>
     <Footer></Footer>

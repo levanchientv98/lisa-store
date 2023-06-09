@@ -25,10 +25,15 @@ const SilderProductStyle = styled.div`
     width: 80%;
     .section4-title {
       width: 310px;
-      .product-title {
-        width: 100%;
-      }
     }
+    .product-title1 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
     .react-multiple-carousel__arrow--right {
       top: calc(4% + 150px);
       right: calc(4% + -12px);
@@ -44,7 +49,7 @@ const SlideProduct = () => {
   return (
     <SilderProductStyle>
       <div className="section4-title">Best sellers</div>
-      <div className="product-title">
+      <div className="product-title1">
         <div className="list-title">
           <p>All Products</p>
           <span>T-Shirt</span>
