@@ -22,17 +22,20 @@ const SilderProductStyle = styled.div`
   //Màn hình Moblie
   @media (max-width: 768px) {
     margin: 0 40px;
-    width: 100%;
+    width: 80%;
     .section4-title {
       width: 310px;
+      .product-title {
+        width: 100%;
+      }
     }
     .react-multiple-carousel__arrow--right {
       top: calc(4% + 150px);
-      right: calc(4% + 44px);
+      right: calc(4% + -12px);
     }
     .react-multiple-carousel__arrow--left {
       top: calc(4% + 150px);
-      left: calc(4% + -16px);
+      left: calc(4% + -12px);
     }
   }
 `;

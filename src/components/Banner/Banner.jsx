@@ -70,15 +70,15 @@ const BannerStyled = styled.div`
     height: auto;
     .logo-style {
       width: 150px;
-      right: 24px;
+      right: 0px;
       top: 15px;
     }
     .section3-title {
-      width: 58%;
+      width: 52%;
       height: 100px;
       position: absolute;
-      top: 7118px;
-      padding-left: 178px;
+      top: 7096px;
+      padding-left: 183px;
       gap: 0px;
       img {
         width: 15vw;

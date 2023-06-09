@@ -6,8 +6,12 @@ import { Footer } from "components/Footer";
 const LayoutStyle = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap%22%22");
   font-family: "Roboto", sans-serif;
-  width: 100%;
+  width: 1920px;
   margin: 0 auto;
+  //Màn hình Moblie
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const PrimaryLayout = () => (
