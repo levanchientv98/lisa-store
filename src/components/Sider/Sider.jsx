@@ -19,6 +19,8 @@ const SiderStyle = styled.div`
     font-weight: 600;
     font-size: 34px;
     line-height: 40px;
+    margin-bottom: 0;
+    padding-bottom: 103px;
     /* padding: 65px 64px 103px 60px; */
     box-sizing: border-box;
   }
@@ -40,14 +42,29 @@ const SiderStyle = styled.div`
 
     a:hover {
       color: #ff6f61;
+      font-weight: 600;
+    }
+    li:hover {
+      svg {
+        filter: invert(52%) sepia(29%) saturate(1083%) hue-rotate(316deg)
+          brightness(101%) contrast(101%);
+      }
     }
     .ant-menu-item {
+      margin-left: 45px;
       margin-bottom: 3vh;
     }
   }
   .ant-menu-item {
     width: 250px;
   }
+
+  /* li:first-child {
+    svg {
+      filter: invert(82%) sepia(6%) saturate(11%) hue-rotate(17deg)
+        brightness(101%) contrast(91%);
+    }
+  } */
 `;
 function getItem(label, key, icon, children) {
   return {
