@@ -2,9 +2,8 @@ import { Layout, Space } from "antd";
 import HeaderComponent from "components/Header/HeaderAdmin";
 import { SiderComponent } from "components/Sider";
 import { Outlet } from "react-router-dom";
-import { Chart1 } from "components/Chart";
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout;
 const headerStyle = {
   textAlign: "center",
   height: "auto",
@@ -24,11 +23,8 @@ const siderStyle = {
   lineHeight: "100vh",
   color: "#1E2832",
   backgroundColor: "#ffffff",
-};
-const footerStyle = {
-  textAlign: "center",
-  color: "#000000",
-  backgroundColor: "#7dbcea",
+  padding: "30px 0px 80px 0px",
+  boxSizing: "border-box",
 };
 
 const PrimaryLayoutAdmin = ({ children }) => {
@@ -48,12 +44,10 @@ const PrimaryLayoutAdmin = ({ children }) => {
           <Header style={headerStyle}>
             <HeaderComponent></HeaderComponent>
           </Header>
-          {children}
           <Content style={contentStyle}>
-            <Chart1></Chart1>
+            {children}
             <Outlet />
           </Content>
-          <Footer style={footerStyle}>Footer</Footer>
         </Layout>
       </Layout>
     </Space>
